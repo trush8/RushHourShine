@@ -70,6 +70,8 @@ border-radius:10px;
 text-decoration:none;
 font-weight:600;
 transition:0.3s;
+border:none;
+cursor:pointer;
 }
 
 .btn-primary{
@@ -81,6 +83,7 @@ box-shadow:0 0 20px rgba(30,167,255,0.4);
 .btn-secondary{
 border:2px solid #1ea7ff;
 color:#1ea7ff;
+background:transparent;
 }
 
 .btn:hover{
@@ -110,7 +113,7 @@ color:#bdbdbd;
 line-height:1.8;
 }
 
-/* SERVICE CATEGORIES */
+/* SERVICES */
 
 .category-title{
 margin-top:60px;
@@ -232,11 +235,6 @@ font-size:1rem;
 textarea{
 min-height:140px;
 resize:none;
-}
-
-button{
-border:none;
-cursor:pointer;
 }
 
 /* LIGHTBOX */
@@ -441,15 +439,15 @@ Premium paint enhancement and ceramic protection services designed to restore gl
 <div class="grid">
 
 <div class="review">
-“Made my interior look brand new again. Super professional and convenient.” ⭐⭐⭐⭐⭐
+“Made my interior look brand new again. Super professional and convenient.” 
 </div>
 
 <div class="review">
-“Best detail I’ve had done. Got all the dog hair out completely.” ⭐⭐⭐⭐⭐
+“Best detail I’ve had done. Got all the dog hair out completely.” 
 </div>
 
 <div class="review">
-“Fast response, professional service, and amazing results.” ⭐⭐⭐⭐⭐
+“Fast response, professional service, and amazing results.” 
 </div>
 
 </div>
@@ -469,6 +467,10 @@ Premium paint enhancement and ceramic protection services designed to restore gl
 <textarea name="details" placeholder="What do you need done?" required></textarea>
 
 <input type="hidden" name="_captcha" value="false">
+
+<input type="hidden" name="_subject" value="New Rush Hour Shine Booking">
+
+<input type="hidden" name="_next" value="https://rushhourshine.com">
 
 <button type="submit" class="btn btn-primary">
 Request Booking
