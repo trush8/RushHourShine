@@ -96,7 +96,7 @@ margin:auto;
 }
 
 .section-title{
-font-size:2.3rem;
+font-size:2.5rem;
 text-align:center;
 margin-bottom:20px;
 color:#1ea7ff;
@@ -104,19 +104,27 @@ color:#1ea7ff;
 
 .section-text{
 text-align:center;
-max-width:750px;
+max-width:800px;
 margin:auto;
 color:#bdbdbd;
 line-height:1.8;
 }
 
-/* SERVICES */
+/* SERVICE CATEGORIES */
+
+.category-title{
+margin-top:60px;
+margin-bottom:25px;
+font-size:1.6rem;
+color:#1ea7ff;
+border-left:4px solid #1ea7ff;
+padding-left:15px;
+}
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
-margin-top:50px;
 }
 
 .card{
@@ -130,13 +138,17 @@ transition:0.3s;
 .card:hover{
 transform:translateY(-7px);
 border-color:#1ea7ff;
-box-shadow:0 0 25px rgba(30,167,255,0.2);
+box-shadow:0 0 25px rgba(30,167,255,0.25);
 }
 
 .card h3{
 margin-bottom:15px;
 font-size:1.3rem;
-color:white;
+}
+
+.card p{
+color:#cfcfcf;
+line-height:1.7;
 }
 
 .price{
@@ -150,8 +162,8 @@ color:#1ea7ff;
 
 .gallery{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 margin-top:50px;
 }
 
@@ -159,6 +171,8 @@ margin-top:50px;
 position:relative;
 overflow:hidden;
 border-radius:18px;
+border:2px solid rgba(30,167,255,0.45);
+box-shadow:0 0 25px rgba(30,167,255,0.18);
 }
 
 .image-box img{
@@ -167,10 +181,11 @@ height:320px;
 object-fit:cover;
 transition:0.4s;
 cursor:pointer;
+display:block;
 }
 
 .image-box:hover img{
-transform:scale(1.06);
+transform:scale(1.05);
 }
 
 .label{
@@ -192,6 +207,7 @@ padding:25px;
 border-radius:18px;
 color:#d7d7d7;
 line-height:1.7;
+border:1px solid rgba(30,167,255,0.15);
 }
 
 /* FORM */
@@ -254,8 +270,6 @@ border-top:1px solid rgba(255,255,255,0.08);
 margin-top:60px;
 }
 
-/* MOBILE */
-
 @media(max-width:768px){
 
 h1{
@@ -280,7 +294,7 @@ font-size:1rem;
 <h1>Rush Hour Shine</h1>
 
 <p class="tagline">
-Premium mobile detailing in Pensacola. Interior restorations, pet hair removal, deep cleans, and professional detailing — brought directly to your driveway.
+Premium mobile detailing in Pensacola specializing in deep interior restoration, exterior detailing, carpet shampooing, and pet hair removal — delivered directly to your driveway.
 </p>
 
 <div class="hero-buttons">
@@ -297,7 +311,7 @@ Premium mobile detailing in Pensacola. Interior restorations, pet hair removal, 
 <h2 class="section-title">Professional Mobile Detailing</h2>
 
 <p class="section-text">
-Rush Hour Shine specializes in bringing dirty interiors back to life with high-quality detailing services designed for convenience and results. Whether your vehicle needs a full reset or just a fresh interior clean, we come to you and handle every detail professionally.
+Rush Hour Shine is committed to restoring your vehicle to a clean, refreshed, like-new condition with professional mobile detailing services designed for convenience and quality. We come directly to your home or workplace and focus on the details most others miss.
 </p>
 
 </section>
@@ -306,30 +320,76 @@ Rush Hour Shine specializes in bringing dirty interiors back to life with high-q
 
 <h2 class="section-title">Services</h2>
 
+<h3 class="category-title">Full Detail Packages</h3>
+
 <div class="grid">
 
 <div class="card">
-<h3>Full Truck / SUV Detail</h3>
-<p>Complete interior and exterior restoration for larger vehicles needing a full refresh.</p>
+<h3>Full SUV / Truck Detail</h3>
+<p>
+Complete interior and exterior detail including deep vacuuming, wipe down, windows, wheels, door jambs, and exterior wash for larger vehicles needing a full refresh.
+</p>
 <div class="price">$190</div>
 </div>
 
 <div class="card">
 <h3>Full Car Detail</h3>
-<p>Deep clean and restoration designed to make your car look fresh again.</p>
+<p>
+Professional interior and exterior restoration designed to remove dirt, dust, grime, and leave your vehicle looking refreshed and protected.
+</p>
 <div class="price">$150</div>
+</div>
+
+</div>
+
+<h3 class="category-title">Interior Services</h3>
+
+<div class="grid">
+
+<div class="card">
+<h3>Interior Only Detail</h3>
+<p>
+Deep vacuuming, interior wipe down, cleaning of plastics and trim, cup holders, windows, and overall interior restoration.
+</p>
+<div class="price">$85 - $100</div>
 </div>
 
 <div class="card">
 <h3>Pet Hair Removal</h3>
-<p>We remove stubborn embedded pet hair most vacuums leave behind.</p>
-<div class="price">$20</div>
+<p>
+Removal of stubborn embedded pet hair from carpets, seats, floor mats, and upholstery using professional detailing tools.
+</p>
+<div class="price">$20+</div>
 </div>
 
 <div class="card">
-<h3>Interior Only</h3>
-<p>Deep vacuum, wipe down, stain removal, and interior refresh service.</p>
-<div class="price">$85</div>
+<h3>Carpet Shampoo</h3>
+<p>
+Deep carpet extraction and shampoo service designed to lift dirt, stains, and odors from carpeted surfaces and floor mats.
+</p>
+<div class="price">$50</div>
+</div>
+
+</div>
+
+<h3 class="category-title">Exterior Services</h3>
+
+<div class="grid">
+
+<div class="card">
+<h3>Exterior Only Detail</h3>
+<p>
+Professional exterior hand wash including wheels, tires, windows, bug removal, and shine restoration.
+</p>
+<div class="price">$80 - $100</div>
+</div>
+
+<div class="card">
+<h3>Exterior Polish & Ceramic Coating</h3>
+<p>
+Premium paint enhancement and ceramic protection services designed to restore gloss and add long-lasting protection.
+</p>
+<div class="price">Coming Soon</div>
 </div>
 
 </div>
@@ -389,7 +449,7 @@ Rush Hour Shine specializes in bringing dirty interiors back to life with high-q
 </div>
 
 <div class="review">
-“Fast response, great communication, and amazing results.” ⭐⭐⭐⭐⭐
+“Fast response, professional service, and amazing results.” ⭐⭐⭐⭐⭐
 </div>
 
 </div>
@@ -437,4 +497,3 @@ document.getElementById('lightbox-img').src = src;
 
 </body>
 </html>
-n to press.
