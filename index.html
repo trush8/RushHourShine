@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rush Hour Shine | Premium Mobile Detailing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#05070d;
+color:white;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+header{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.92)),
+url('https://images.unsplash.com/photo-1503376780353-7e6692767b70');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content{
+max-width:750px;
+}
+
+h1{
+font-size:4rem;
+font-weight:700;
+color:#1ea7ff;
+text-shadow:0 0 20px rgba(30,167,255,0.6);
+}
+
+.tagline{
+margin-top:20px;
+font-size:1.2rem;
+color:#d8d8d8;
+line-height:1.7;
+}
+
+.hero-buttons{
+margin-top:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 32px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#1ea7ff;
+color:white;
+box-shadow:0 0 20px rgba(30,167,255,0.4);
+}
+
+.btn-secondary{
+border:2px solid #1ea7ff;
+color:#1ea7ff;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section-title{
+font-size:2.3rem;
+text-align:center;
+margin-bottom:20px;
+color:#1ea7ff;
+}
+
+.section-text{
+text-align:center;
+max-width:750px;
+margin:auto;
+color:#bdbdbd;
+line-height:1.8;
+}
+
+/* SERVICES */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:#0d111b;
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(30,167,255,0.15);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-7px);
+border-color:#1ea7ff;
+box-shadow:0 0 25px rgba(30,167,255,0.2);
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.3rem;
+color:white;
+}
+
+.price{
+margin-top:18px;
+font-size:1.4rem;
+font-weight:700;
+color:#1ea7ff;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.image-box{
+position:relative;
+overflow:hidden;
+border-radius:18px;
+}
+
+.image-box img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:0.4s;
+cursor:pointer;
+}
+
+.image-box:hover img{
+transform:scale(1.06);
+}
+
+.label{
+position:absolute;
+top:15px;
+left:15px;
+background:#1ea7ff;
+padding:6px 14px;
+border-radius:6px;
+font-size:12px;
+font-weight:700;
+}
+
+/* REVIEWS */
+
+.review{
+background:#0d111b;
+padding:25px;
+border-radius:18px;
+color:#d7d7d7;
+line-height:1.7;
+}
+
+/* FORM */
+
+form{
+max-width:600px;
+margin:50px auto 0;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:16px;
+background:#0d111b;
+border:1px solid rgba(255,255,255,0.08);
+border-radius:10px;
+color:white;
+font-size:1rem;
+}
+
+textarea{
+min-height:140px;
+resize:none;
+}
+
+button{
+border:none;
+cursor:pointer;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.92);
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:90%;
+border-radius:12px;
+}
+
+/* FOOTER */
+
+footer{
+padding:35px;
+text-align:center;
+color:#8f8f8f;
+border-top:1px solid rgba(255,255,255,0.08);
+margin-top:60px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+h1{
+font-size:2.8rem;
+}
+
+.tagline{
+font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero-content">
+
+<h1>Rush Hour Shine</h1>
+
+<p class="tagline">
+Premium mobile detailing in Pensacola. Interior restorations, pet hair removal, deep cleans, and professional detailing — brought directly to your driveway.
+</p>
+
+<div class="hero-buttons">
+<a href="tel:8087266403" class="btn btn-primary">Call Now</a>
+<a href="sms:8087266403" class="btn btn-secondary">Text Now</a>
+</div>
+
+</div>
+
+</header>
+
+<section>
+
+<h2 class="section-title">Professional Mobile Detailing</h2>
+
+<p class="section-text">
+Rush Hour Shine specializes in bringing dirty interiors back to life with high-quality detailing services designed for convenience and results. Whether your vehicle needs a full reset or just a fresh interior clean, we come to you and handle every detail professionally.
+</p>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Services</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Full Truck / SUV Detail</h3>
+<p>Complete interior and exterior restoration for larger vehicles needing a full refresh.</p>
+<div class="price">$190</div>
+</div>
+
+<div class="card">
+<h3>Full Car Detail</h3>
+<p>Deep clean and restoration designed to make your car look fresh again.</p>
+<div class="price">$150</div>
+</div>
+
+<div class="card">
+<h3>Pet Hair Removal</h3>
+<p>We remove stubborn embedded pet hair most vacuums leave behind.</p>
+<div class="price">$20</div>
+</div>
+
+<div class="card">
+<h3>Interior Only</h3>
+<p>Deep vacuum, wipe down, stain removal, and interior refresh service.</p>
+<div class="price">$85</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Before & After Results</h2>
+
+<div class="gallery">
+
+<div class="image-box">
+<span class="label">BEFORE</span>
+<img src="images/before1.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="image-box">
+<span class="label">AFTER</span>
+<img src="images/after1.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="image-box">
+<span class="label">BEFORE</span>
+<img src="images/before2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="image-box">
+<span class="label">AFTER</span>
+<img src="images/after2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="image-box">
+<img src="images/clean1.jpg" onclick="openLightbox(this.src)">
+</div>
+
+<div class="image-box">
+<img src="images/clean2.jpg" onclick="openLightbox(this.src)">
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Customer Reviews</h2>
+
+<div class="grid">
+
+<div class="review">
+“Made my interior look brand new again. Super professional and convenient.” ⭐⭐⭐⭐⭐
+</div>
+
+<div class="review">
+“Best detail I’ve had done. Got all the dog hair out completely.” ⭐⭐⭐⭐⭐
+</div>
+
+<div class="review">
+“Fast response, great communication, and amazing results.” ⭐⭐⭐⭐⭐
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Book a Detail</h2>
+
+<form action="https://formsubmit.co/travisarush11@gmail.com" method="POST">
+
+<input type="text" name="name" placeholder="Name" required>
+
+<input type="tel" name="phone" placeholder="Phone Number" required>
+
+<textarea name="details" placeholder="What do you need done?" required></textarea>
+
+<input type="hidden" name="_captcha" value="false">
+
+<button type="submit" class="btn btn-primary">
+Request Booking
+</button>
+
+</form>
+
+</section>
+
+<div class="lightbox" onclick="this.style.display='none'">
+<img id="lightbox-img">
+</div>
+
+<footer>
+© Rush Hour Shine | Pensacola Mobile Detailing
+</footer>
+
+<script>
+
+function openLightbox(src){
+document.querySelector('.lightbox').style.display='flex';
+document.getElementById('lightbox-img').src = src;
+}
+
+</script>
+
+</body>
+</html>
+can you make me a step by step guide again, with a domain
+
+Absolutely — here’s the full beginner-friendly step-by-step guide for getting your Rush Hour Shine website live with a custom domain.
+
+We’ll use:
+
+Namecheap for the domain
+GitHub to host the website free
+🚀 PART 1 — BUY YOUR DOMAIN
+1. Go to:
+
+Namecheap
+
+2. Search for your domain
+
+Try:
+
+rushhourshine.com
+rushhourshineauto.com
+rushhourdetailing.com
+
+👉 Buy the one you like best
+
+3. Create your account + checkout
+
+Usually around:
+💲 $10–15/year
+
+🚀 PART 2 — CREATE YOUR WEBSITE
+4. Go to:
+
+GitHub
+
+Create an account if you haven’t already.
+
+5. Create a new repository
+
+Click:
+➡️ New Repository
+
+Name it EXACTLY:
+
+rushhourshine
+
+Set:
+
+✅ Public
+❌ Don’t add README
+
+Click:
+➡️ Create repository
+
+🚀 PART 3 — ADD YOUR WEBSITE CODE
+6. Click:
+
+➡️ Add file → Create new file
+
+Name it:
+
+index.html
+7. Paste your FULL website code
+
+Paste the black/blue premium code I gave you.
+
+8. Scroll down
+
+Commit message:
+
+add website
+
+Click:
+➡️ Commit changes
+
+🚀 PART 4 — ADD YOUR PHOTOS
+9. Create the images folder
+
+Click:
+➡️ Add file → Create new file
+
+Type:
+
+images/test.txt
+
+This creates the folder.
+
+10. Commit it
+
+Commit message:
+
+create images folder
+
+Click:
+➡️ Commit changes
+
+🚀 PART 5 — UPLOAD YOUR PHOTOS
+11. Open the images folder
+
+Click:
+👉 images
+
+12. Upload your pictures
+
+Click:
+➡️ Add file → Upload files
+
+Drag your photos in.
+
+Rename them EXACTLY:
+
+before1.jpg
+after1.jpg
+before2.jpg
+after2.jpg
+clean1.jpg
+clean2.jpg
+13. Commit them
+
+Commit message:
+
+add images
+
+Click:
+➡️ Commit changes
+
+🚀 PART 6 — TURN THE WEBSITE ON
+14. Go to:
+
+➡️ Settings
+
+(top right of repo)
+
+15. Click:
+
+➡️ Pages
+
+(left menu)
+
+16. Under “Build and deployment”
+
+Set:
+
+Source → Deploy from a branch
+Branch → main
+Folder → / (root)
+
+Click:
+➡️ Save
+
+🌐 YOUR WEBSITE IS NOW LIVE
+
+It’ll appear at:
+
+https://yourusername.github.io/rushhourshine
+
+(wait 1–2 minutes)
+
+🚀 PART 7 — CONNECT YOUR DOMAIN
+17. Back in GitHub Pages
+
+Under:
+➡️ Custom domain
+
+Type your domain:
+
+rushhourshine.com
+
+Click:
+➡️ Save
+
+🚀 PART 8 — CONNECT DOMAIN DNS
+18. Go back to Namecheap
+
+Click:
+➡️ Domain List
+➡️ Manage
+➡️ Advanced DNS
+
+19. Add THESE records
+Add 4 A Records:
+Type	Host	Value
+A Record	@	185.199.108.153
+A Record	@	185.199.109.153
+A Record	@	185.199.110.153
+A Record	@	185.199.111.153
+20. Add CNAME
+Type	Host	Value
+CNAME	www	yourusername.github.io
+
+(Replace yourusername with your GitHub username)
+
+🚀 PART 9 — FINAL STEP
+21. Wait
+
+Usually:
+⏳ 10–30 minutes
+
+Then your website works at:
+
+https://rushhourshine.com
+🔒 TURN ON HTTPS
+
+Back in GitHub Pages:
+✅ Check:
+➡️ Enforce HTTPS
+
+🔥 YOU ARE NOW FULLY LIVE
+
+You officially have:
+
+A real business website
+Your own domain
+Booking form
+Before/after gallery
+Professional branding
+💡 WHAT TO DO NEXT
+
+Immediately:
+
+Put your website in Instagram bio
+Post before/after pics
+Share it in Facebook groups
+Ask every customer for reviews
+🚀 BIGGEST TIP
+
+Your photos are your marketing.
+
+The cleaner and more dramatic your before/afters look:
+👉 the easier it is to get customers.
+
+That’s okay — GitHub changed the setup a bit. You can absolutely check the README box.
+
+✅ Do this:
+
+When creating the repository:
+
+Repository name:
+rushhourshine
+✅ Public
+✅ Add a README file
+
+Then click:
+➡️ Create repository
+
+🔥 AFTER IT CREATES
+
+Now you’ll finally see:
+
+Add file
+Create new file
+Upload files
+🚀 NEXT STEP
+1. Click:
+
+➡️ Add file → Create new file
+
+Name it:
+
+index.html
+2. Paste your FULL website code
+
+(the black/blue premium code)
+
+3. Scroll down
+
+Commit message:
+
+add website
+
+Click:
+➡️ Commit changes
+
+🚀 THEN CREATE YOUR IMAGES FOLDER
+4. Click:
+
+➡️ Add file → Create new file
+
+Name it:
+
+images/test.txt
+
+This creates the folder.
+
+Commit it.
+
+🚀 THEN UPLOAD YOUR PHOTOS
+5. Open the images folder
+
+Click:
+➡️ Add file → Upload files
+
+Upload your photos and rename them:
+
+before1.jpg
+after1.jpg
+before2.jpg
+after2.jpg
+clean1.jpg
+clean2.jpg
+
+Commit changes.
+
+🚀 LAST STEP — TURN WEBSITE ON
+6. Go to:
+
+➡️ Settings → Pages
+
+Set:
+
+Source → Deploy from branch
+Branch → main
+Folder → /root
+
+Click:
+➡️ Save
+
+🌐 YOUR WEBSITE WILL GO LIVE AT:
+https://yourusername.github.io/rushhourshine
+
+Once that works, I’ll help you connect the custom domain.
+
+how do i add images to the file
+
+No problem — here’s the exact way to add your photos into the images folder in GitHub.
+
+📸 HOW TO ADD IMAGES TO YOUR WEBSITE
+✅ 1. Open your repository
+
+Go to:
+👉 rushhourshine
+
+✅ 2. Open the images folder
+
+Click:
+👉 images
+
+(if you don’t have it yet, create it first)
+
+🔥 IF YOU DON’T HAVE THE IMAGES FOLDER YET
+
+Click:
+➡️ Add file → Create new file
+
+Type:
+
+images/test.txt
+
+Then:
+
+Scroll down
+Click Commit changes
+
+👉 Now the folder exists.
+
+🚀 NOW ADD YOUR PHOTOS
+✅ 3. Click:
+
+➡️ Add file → Upload files
+
+✅ 4. Drag your photos in
+
+Drop them into the upload box.
+
+✅ 5. Rename them EXACTLY
+
+At the top where each filename appears, rename them to:
+
+before1.jpg
+after1.jpg
+before2.jpg
+after2.jpg
+clean1.jpg
+clean2.jpg
+
+⚠️ Make sure:
+
+no spaces
+lowercase
+.jpg matches your code
+✅ 6. Commit changes
+
+Scroll down.
+
+Commit message:
+
+add images
+
+Click:
+➡️ Commit changes
+
+🔥 DONE
+
+Now your repo should look like:
+
+index.html
+README.md
+images/
+   before1.jpg
+   after1.jpg
+   before2.jpg
+   after2.jpg
+   clean1.jpg
+   clean2.jpg
+🌐 REFRESH YOUR WEBSITE
+
+Wait like:
+⏳ 30–60 seconds
+
+Then refresh your site.
+
+Your images should appear automatically.
+
+⚠️ IF AN IMAGE DOESN’T SHOW
+
+It’s almost always:
+
+wrong filename
+.jpeg instead of .jpg
+uppercase letters
+
+Example:
+
+Before1.jpg ❌
+before1.jpg ✅
+
+If you get stuck, send a screenshot of your repo and I’ll point exactly where to click.
+
+theres nowhere that says add file upload file
+
+You’re probably inside the file view or GitHub’s newer mobile layout. The button is there — it’s just hidden in a menu sometimes.
+
+🔥 EASIEST WAY (works every time)
+✅ STEP 1
+
+Go to your repo homepage:
+👉 rushhourshine
+
+You should see:
+
+README.md
+index.html
+maybe images
+✅ STEP 2
+
+Look for ONE of these:
+
+On desktop:
+
+Top right area:
+
++
+Add file
+three dots ...
+On mobile:
+
+Tap:
+➡️ +
+OR
+➡️ ...
+
+GitHub hides “Upload files” inside there.
+
+✅ STEP 3
+
+Tap:
+➡️ Upload files
+
+THAT is where you drag/drop your photos.
+
+⚠️ IF YOU STILL DON’T SEE IT
+
+You may accidentally be:
+
+inside a file
+inside settings
+inside Pages
+
+Go BACK until you see the main repo page.
+
+🔥 SUPER EASY METHOD (DIRECT LINK)
+
+Use this format in your browser:
+
+https://github.com/YOURUSERNAME/rushhourshine/upload/main
+
+Replace:
+
+YOURUSERNAME
+
+with your GitHub username.
+
+👉 That opens the upload screen directly.
+
+✅ THEN:
+Drag your images in
+Rename them:
+before1.jpg
+after1.jpg
+before2.jpg
+after2.jpg
+clean1.jpg
+clean2.jpg
+Commit changes
+💡 IMPORTANT
+
+If you’re already INSIDE the images folder:
+👉 you do NOT type images/ anymore.
+
+Just:
+
+before1.jpg
+
+If you want, send me:
+
+a screenshot of what you see
+OR
+your GitHub username
+
+and I’ll tell you the exact button to press.
